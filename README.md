@@ -5,10 +5,12 @@
 1. Сначала убедитесь, что у вас установлен Postman. Вы можете скачать его на официальном сайте: https://www.postman.com/downloads/
 Запустите Postman.
 2. Создайте новый запрос. В Postman нажмите кнопку “Home” в левом верхнем углу.
- 
+ ![1](https://github.com/user-attachments/assets/acfcd14e-47b4-4134-9dc9-8d23aada030a)
 Нажмите кнопку “New request” в открывшемся окне.
+![2](https://github.com/user-attachments/assets/59be985d-23bf-4829-b3cf-e08609ef4e42)
+
  
-3. Заполните параметры запроса
+4. Заполните параметры запроса
 В поле “Request URL” введите API URL: https://demo.altcraft.com/api/v1.1/profiles/import
 Выберите метод "POST" для вашего запроса.
  
