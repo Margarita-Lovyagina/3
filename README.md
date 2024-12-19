@@ -41,8 +41,8 @@
 •	**_Iname** – Doe  
 
 Составим запрос:
-      
-      >{
+
+       '{ 
         "token": "c7f55f8f24204b9f91bfaaedda052e49",  
         "db_id": 1,  
         "matching": "email",  
@@ -55,7 +55,7 @@
           "_lname": "Doe"  
           "_bdate": "YOUR_BDATE_HERE"T21:00:00Z"  
           }  
-        }
+        }'
   
 ![6](https://github.com/user-attachments/assets/532e2a0b-ebfc-419f-9cf6-c7005cb1bfc4)
 
@@ -71,15 +71,15 @@
 •	**"_fname"**, **"_lname"** – имя и фамилия клиента.  
 •	**"_bdate"** – дата рождения клиента в формате "1990-01-15T12:00:00Z".  
 
-5.  Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:
+5. Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:
    
-   >{
+   '{
    let today = new Date();
    let pastDate = new Date();
    pastDate.setFullYear(today.getFullYear() - 20);
    let formattedDate = pastDate.toISOString().slice(0, 10);
    pm.environment.set("pastDate", formattedDate);
-   }
+   }'
    
 ![7](https://github.com/user-attachments/assets/2f117dae-f978-4217-a6a7-c48eb7206fc6)
 
