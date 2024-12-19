@@ -41,21 +41,21 @@
 •	**_Iname** – Doe  
 
 Составим запрос:
-
->{
-  "token": "c7f55f8f24204b9f91bfaaedda052e49",  
-  "db_id": 1,  
-  "matching": "email",  
-  "email": "john@example.com",  
-  "skip_triggers": true,  
-  "skip_invalid_subscriptions": true,  
-  "detect_geo": true,  
-  "data": {  
-    "_fname": "John",  
-    "_lname": "Doe"  
-    "_bdate": "YOUR_BDATE_HERE"T21:00:00Z"  
-    }  
-  }
+      
+      >{
+        "token": "c7f55f8f24204b9f91bfaaedda052e49",  
+        "db_id": 1,  
+        "matching": "email",  
+        "email": "john@example.com",  
+        "skip_triggers": true,  
+        "skip_invalid_subscriptions": true,  
+        "detect_geo": true,  
+        "data": {  
+          "_fname": "John",  
+          "_lname": "Doe"  
+          "_bdate": "YOUR_BDATE_HERE"T21:00:00Z"  
+          }  
+        }
   
 ![6](https://github.com/user-attachments/assets/532e2a0b-ebfc-419f-9cf6-c7005cb1bfc4)
 
