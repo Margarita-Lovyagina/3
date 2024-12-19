@@ -119,7 +119,7 @@
         "resource_id": 1,  
         "custom_fields": {  
         "_browser_name": "Chrome",  
-        "_device_type": "web"  
+        "_device_type": "web"
         }
         }
          "cats": [
@@ -140,23 +140,22 @@
       },
       {
         "channel": "telegram_bot",
-        "cc_data": {} 
+        "cc_data": {}
       },
       {
         "channel": "whatsapp",
         "cc_data": {
-            "phone": "+79000000000"} 
+            "phone": "+79000000000"}
       },
       {
         "channel": "viber",
         "cc_data": {
-            "phone": "+79000000000"} 
+            "phone": "+79000000000"}
       }
     ]
-
   }
 }
-
+ 
 Новые поля:  
 •	**"_sex"** — пол, "0" для мужчины, "1" для женщины;  
 •	**"_city"** — город;  
@@ -196,7 +195,7 @@
     "db_id": 1,
     "matching": "profile_id",
     "profile_id": "675f30d95ec2d7d61fd01e6a"
-    }
+    }  
 
 
 Вам нужно будет найти ID импортированного профиля в ответе на предыдущий POST запрос. Затем замените token, db_id и profile_id на фактический ID профиля.
@@ -209,7 +208,7 @@
 
 ![14](https://github.com/user-attachments/assets/8ac5ead2-0f34-421d-add3-1417738baaaa)
 
-##Возвращаемые параметры
+## Возвращаемые параметры
 
 Параметр	Тип	Описание
 error	int	Код ошибки
