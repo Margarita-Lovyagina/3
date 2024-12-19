@@ -42,7 +42,7 @@
 
 Составим запрос:
 
-       '{ 
+       { 
         "token": "c7f55f8f24204b9f91bfaaedda052e49",  
         "db_id": 1,  
         "matching": "email",  
@@ -55,7 +55,7 @@
           "_lname": "Doe"  
           "_bdate": "YOUR_BDATE_HERE"T21:00:00Z"  
           }  
-        }'
+        }
   
 ![6](https://github.com/user-attachments/assets/532e2a0b-ebfc-419f-9cf6-c7005cb1bfc4)
 
@@ -71,15 +71,15 @@
 •	**"_fname"**, **"_lname"** – имя и фамилия клиента.  
 •	**"_bdate"** – дата рождения клиента в формате "1990-01-15T12:00:00Z".  
 
- Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:
-   
-   '{
+ Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:      
+         
+   {
    let today = new Date();
    let pastDate = new Date();
    pastDate.setFullYear(today.getFullYear() - 20);
    let formattedDate = pastDate.toISOString().slice(0, 10);
    pm.environment.set("pastDate", formattedDate);
-   }'
+   }      
    
 ![7](https://github.com/user-attachments/assets/2f117dae-f978-4217-a6a7-c48eb7206fc6)
 
@@ -90,7 +90,7 @@
 6. Дополните запрос другими данными о профиле клиента.
 Запрос будет выглядеть так (можно скопировать его и вставить в поле **Body**):
 
-'{
+   {
   "token": "c7f55f8f24204b9f91bfaaedda052e49",  
   "db_id": 1,  
   "matching": "email",  
@@ -154,7 +154,8 @@
       }  
     ]  
   }  
-}  '
+}
+      
  
 Новые поля:  
 •	**"_sex"** — пол, "0" для мужчины, "1" для женщины;  
@@ -188,16 +189,14 @@
 Создайте **“New Request”** так же как это было описано выше. Используйте метод Post (выберите слева в выпадающем меню). 
 В поле **“Request URL”** введите API URL: https://demo.altcraft.com/api/v1.1/profiles/get
 В поле **“Body”**, **“raw”** вставьте запрос:
-
-
-'{  
+      
+   {  
     "token": "c7f55f8f24204b9f91bfaaedda052e49",  
     "db_id": 1,  
     "matching": "profile_id",  
     "profile_id": "675f30d95ec2d7d61fd01e6a"  
-    }  '
-
-
+    }        
+    
 Вам нужно будет найти ID импортированного профиля в ответе на предыдущий POST запрос. Затем замените token, db_id и profile_id на фактический ID профиля.
 
  ![12](https://github.com/user-attachments/assets/7bc7dd55-8dd4-402c-a1e6-7d17340a0d6d)
