@@ -71,7 +71,7 @@
 •	**"_fname"**, **"_lname"** – имя и фамилия клиента.  
 •	**"_bdate"** – дата рождения клиента в формате "1990-01-15T12:00:00Z".  
 
-5. Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:
+ Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:
    
    '{
    let today = new Date();
@@ -90,7 +90,7 @@
 6. Дополните запрос другими данными о профиле клиента.
 Запрос будет выглядеть так (можно скопировать его и вставить в поле **Body**):
 
->{
+'{
   "token": "c7f55f8f24204b9f91bfaaedda052e49",  
   "db_id": 1,  
   "matching": "email",  
@@ -119,42 +119,42 @@
         "resource_id": 1,  
         "custom_fields": {  
         "_browser_name": "Chrome",  
-        "_device_type": "web"
-        }
-        }
-         "cats": [
-          "category_1",
-          "category_2"
-        ]
-      },
-      {
-        "channel": "sms",
-        "phone": "+79000000000",
-        "resource_id": 2
-      },
-      {
-        "channel": "push",
-        "subscription_id": "abcdefghijklmnqrstuvwxyz",
-        "provider": "android-firebase",
-        "resource_id": 2
-      },
-      {
-        "channel": "telegram_bot",
-        "cc_data": {}
-      },
-      {
-        "channel": "whatsapp",
-        "cc_data": {
-            "phone": "+79000000000"}
-      },
-      {
-        "channel": "viber",
-        "cc_data": {
-            "phone": "+79000000000"}
-      }
-    ]
-  }
-}
+        "_device_type": "web"  
+        }  
+        }   
+         "cats": [  
+         "category_1",  
+         "category_2"  
+         ]  
+         },   
+      {  
+        "channel": "sms",  
+        "phone": "+79000000000",  
+        "resource_id": 2  
+      },  
+      {  
+        "channel": "push",  
+        "subscription_id": "abcdefghijklmnqrstuvwxyz",  
+        "provider": "android-firebase",  
+        "resource_id": 2  
+      },  
+      {  
+        "channel": "telegram_bot",  
+        "cc_data": {}  
+      },  
+      {  
+        "channel": "whatsapp",  
+        "cc_data": {  
+            "phone": "+79000000000"}  
+      },  
+      {  
+        "channel": "viber",  
+        "cc_data": {  
+            "phone": "+79000000000"}  
+      }  
+    ]  
+  }  
+}  '
  
 Новые поля:  
 •	**"_sex"** — пол, "0" для мужчины, "1" для женщины;  
@@ -190,12 +190,12 @@
 В поле **“Body”**, **“raw”** вставьте запрос:
 
 
->{
-    "token": "c7f55f8f24204b9f91bfaaedda052e49",
-    "db_id": 1,
-    "matching": "profile_id",
-    "profile_id": "675f30d95ec2d7d61fd01e6a"
-    }  
+'{  
+    "token": "c7f55f8f24204b9f91bfaaedda052e49",  
+    "db_id": 1,  
+    "matching": "profile_id",  
+    "profile_id": "675f30d95ec2d7d61fd01e6a"  
+    }  '
 
 
 Вам нужно будет найти ID импортированного профиля в ответе на предыдущий POST запрос. Затем замените token, db_id и profile_id на фактический ID профиля.
