@@ -42,8 +42,7 @@
 
 Составим запрос:
 
-
-{
+>{
   "token": "c7f55f8f24204b9f91bfaaedda052e49",  
   "db_id": 1,  
   "matching": "email",  
@@ -74,7 +73,7 @@
 
 5.  Замените **"YOUR_BDATE_HERE"** на корректную дату рождения в формате ISO 8601 (YYYY-MM-DD). Для того, чтобы получить дату 20 лет назад, нужно использовать Pre-request Script в Postman. Перейдите на вкладку **“Scripts”**, **"Pre-request Script"** и вставьте следующий JavaScript код:
    
-   {
+   >{
    let today = new Date();
    let pastDate = new Date();
    pastDate.setFullYear(today.getFullYear() - 20);
@@ -91,7 +90,7 @@
 6. Дополните запрос другими данными о профиле клиента.
 Запрос будет выглядеть так (можно скопировать его и вставить в поле **Body**):
 
-{
+>{
   "token": "c7f55f8f24204b9f91bfaaedda052e49",  
   "db_id": 1,  
   "matching": "email",  
@@ -192,7 +191,7 @@
 В поле **“Body”**, **“raw”** вставьте запрос:
 
 
-{
+>{
     "token": "c7f55f8f24204b9f91bfaaedda052e49",
     "db_id": 1,
     "matching": "profile_id",
